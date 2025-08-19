@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: RandNLA researcher.
+subtitle: <a href="https://www.youtube.com/watch?v=6htbyY3rH1w&t=1576s">RandNLA</a> researcher.
 
 profile:
   align: right
