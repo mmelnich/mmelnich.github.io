@@ -172,6 +172,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
+  - _includes/bib_search.liquid
   - _pages/profiles.md
   - _pages/teaching.md
   - _pages/projects.md
