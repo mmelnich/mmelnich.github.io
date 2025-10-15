@@ -9,10 +9,17 @@ related_publications: false
 ---
 
 <div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/RandNLA_Dice.jpg" title="RandNLA Dice" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-10 mt-3 mt-md-0 text-center">
+    {% include figure.liquid 
+        loading="eager" 
+        path="assets/img/RandNLA_Dice.jpg" 
+        title="RandNLA Dice" 
+        class="img-fluid rounded z-depth-1" 
+        style="max-width: 110%; transform: scale(1.05);" 
+    %}
   </div>
 </div>
-<div class="caption text-center">
+
+<div class="caption text-center mt-2">
   RandNLA Dice prototype — bridging mathematics and artistry.
 </div>
