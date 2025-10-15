@@ -8,17 +8,23 @@ category: work
 related_publications: true
 ---
 
-{% assign pdf = "assets/img/RandNLA_Dice.jpg" | relative_url %}
+<style>
+/* Remove default padding/margins from this page */
+.page-content, .wrapper, .container, .container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
 
-<div class="container-fluid p-0" style="height:100vh;">
-  <object
-    data="{{ pdf }}#view=FitH"
-    type="application/pdf"
-    width="100%"
-    height="100%">
-    <p>
-      Your browser cannot display this PDF inline.
-      <a href="{{ pdf }}">Download the PDF</a>.
-    </p>
-  </object>
-</div>
+/* Make image fill viewport */
+.fullscreen-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* use 'cover' to crop instead */
+  display: block;
+}
+</style>
+
+<img src="{{ 'assets/img/RandNLA_Dice-1.png' | relative_url }}" 
+     alt="RandNLA Dice" 
+     class="fullscreen-image">
