@@ -15,11 +15,7 @@ related_publications: false
         path="assets/img/RandNLA_Dice.jpg" 
         title="RandNLA Dice" 
         class="img-fluid rounded z-depth-1" 
-        style="max-width: 110%; transform: scale(1.05);" 
+        style="max-width: 150%; transform: scale(1.15);" 
     %}
   </div>
-</div>
-
-<div class="caption text-center mt-2">
-  RandNLA Dice prototype — bridging mathematics and artistry.
 </div>
