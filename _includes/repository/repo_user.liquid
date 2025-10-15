@@ -3,7 +3,6 @@
 {% case lang %}
   {% when 'pt' %}
     {% assign lang = site.lang %}
-
   {% when 'zh' %}
     {% assign lang_last = site.lang | split: '-' | last %}
     {% case lang_last %}
@@ -14,17 +13,71 @@
     {% endcase %}
 {% endcase %}
 
+<style>
+  /* Container setup */
+  .repo {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Make the card responsive */
+  .repo img.w-100 {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Overlay block that hides the "B-" area on the image.
+     Using % so it scales with the image/card size. Adjust the values if needed. */
+  .hide-grade {
+    position: absolute;
+    /* Position this rectangle over the “B-” text area. Tweak as needed. */
+    top: 6%;          /* ← adjust if the grade sits higher/lower */
+    right: 6%;        /* ← adjust if the grade sits closer/farther from the edge */
+    width: 10%;       /* ← horizontal coverage */
+    height: 12%;      /* ← vertical coverage */
+    z-index: 2;
+    border-radius: 4px;
+    pointer-events: none; /* keep the link clickable */
+  }
+
+  /* Show the light overlay in light mode, dark overlay in dark mode */
+  @media (prefers-color-scheme: light) {
+    .hide-grade.light { display: block; background: #ffffff; }
+    .hide-grade.dark  { display: none; }
+  }
+  @media (prefers-color-scheme: dark) {
+    .hide-grade.light { display: none; }
+    .hide-grade.dark  { display: block; background: #0d1117; } /* GitHub dark default */
+  }
+
+  /* If your site uses .only-light / .only-dark toggling via CSS,
+     the media queries above still work. If you rely solely on those classes,
+     you can force overlay visibility with these helpers (optional): */
+  .only-light ~ .hide-grade.light { display: block; }
+  .only-light ~ .hide-grade.dark  { display: none; }
+  .only-dark  ~ .hide-grade.dark  { display: block; }
+  .only-dark  ~ .hide-grade.light { display: none; }
+
+  /* Ensure wrapper spacing doesn't interfere */
+  .p-2.text-center { padding: 0 !important; }
+</style>
+
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.username }}">
     <img
       class="only-light w-100"
       alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true&hide_rank=true"
+      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true"
     >
     <img
       class="only-dark w-100"
       alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true&hide_rank=true"
+      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true"
     >
   </a>
+
+  <!-- Two overlays: one for light mode, one for dark mode -->
+  <div class="hide-grade light"></div>
+  <div class="hide-grade dark"></div>
 </div>
