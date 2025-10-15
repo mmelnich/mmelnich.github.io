@@ -8,7 +8,7 @@ category: work
 related_publications: true
 ---
 
-{% assign pdf = "assets/pdf/RandNLA_Dice.pdf" | relative_url %}
+{% assign pdf = "assets/img/RandNLA_Dice.jpg" | relative_url %}
 
 <div class="container-fluid p-0" style="height:100vh;">
   <object
