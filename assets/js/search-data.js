@@ -398,16 +398,16 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-i-successfully-defended-my-ph-d-dissertation-titled-responsible-recklessness-why-high-performance-computing-must-embrace-randomized-numerical-linear-algebra",
+          title: 'I successfully defended my Ph.D dissertation titled “Responsible Recklessness: Why High Performance Computing...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-announcement-2",
+          title: 'Announcement_2',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-if-you-plan-on-attending-the-sc25-conference-come-join-by-birds-of-a-feather-session-on-randnla-software",
+          title: 'If you plan on attending the SC25 conference, come join by Birds of...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
