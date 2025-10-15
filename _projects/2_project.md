@@ -25,6 +25,6 @@ related_publications: true
 }
 </style>
 
-<img src="{{ 'assets/img/RandNLA_Dice-1.png' | relative_url }}" 
+<img src="{{ 'assets/img/RandNLA_Dice.jpg' | relative_url }}" 
      alt="RandNLA Dice" 
      class="fullscreen-image">
