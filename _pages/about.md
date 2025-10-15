@@ -27,6 +27,3 @@ latest_posts:
 
 I am a final-year Computer Science Ph.D student at the University of Tennessee Knoxville, advised by [Dr. Jack Dongarra](https://scholar.google.com/citations?user=X4SbSTAAAAAJ&hl=en).  
 I also serve as a graduate research assistant at the [Innovative Computing Laboratory](https://icl.utk.edu/).
-
-I am currently preparing to defend my dissertation, titled "Randomized Algorithms for Low
-and Full-Rank Decompositions, and Their Implementations in RandLAPACK" in the Fall semester 2025.
