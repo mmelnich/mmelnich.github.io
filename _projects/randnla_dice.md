@@ -1,11 +1,11 @@
---- 
-layout: page 
-title: RandNLA Dice 
-description: SC25 BoF Handout 
-img: assets/img/12.jpg 
-importance: 1 
-category: work-adjacent 
-related_publications: false 
+---
+layout: page
+title: RandNLA Dice
+description: SC25 BoF Handout
+img: assets/img/12.jpg
+importance: 1
+category: work-adjacent
+related_publications: false
 ---
 
 <style>
@@ -16,20 +16,18 @@ related_publications: false
   max-width: 100% !important;
 }
 
-/* Responsive fullscreen image that scales on zoom */
-.fullscreen-image {
+/* Make image fill viewport and scale with zoom */
+html, body {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  max-height: 100vh;
+  height: 100%;
+  margin: 0;
 }
 
-/* Optional: ensure the body takes full height */
-html, body {
-  margin: 0;
-  padding: 0;
+.fullscreen-image {
+  width: 100%;
   height: 100%;
+  object-fit: contain; /* use 'cover' to crop instead */
+  display: block;
 }
 </style>
 
