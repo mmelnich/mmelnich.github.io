@@ -412,6 +412,11 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-randnla-dice",
+          title: 'RandNLA Dice',
+          description: "SC25 BoF Handout",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/randnla_dice/";
             },},{
         id: 'social-email',
         title: 'email',
