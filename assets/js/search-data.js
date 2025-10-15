@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "My GitHub repos",
+          description: "Below is my personal GitHub repository, as well as the repos of the projects that I actively contribute to.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
@@ -412,11 +412,6 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-randnla-dice",
-          title: 'RandNLA Dice',
-          description: "SC25 BoF Handout",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
             },},{
         id: 'social-email',
         title: 'email',
