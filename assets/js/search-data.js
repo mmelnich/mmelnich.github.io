@@ -401,13 +401,11 @@ ninja.data = [{
             },},{id: "news-i-successfully-defended-my-ph-d-dissertation-titled-responsible-recklessness-why-high-performance-computing-must-embrace-randomized-numerical-linear-algebra",
           title: 'I successfully defended my Ph.D dissertation titled “Responsible Recklessness: Why High Performance Computing...',
           description: "",
-          section: "News",},{id: "news-announcement-2",
-          title: 'Announcement_2',
+          section: "News",},{id: "news-i-am-excited-to-announce-that-on-january-2nd-2026-i-will-be-starting-my-postdoc-appointment-at-icsi-and-uc-berkeley-department-of-statistics-working-under-supervision-of-dr-michael-mahoney",
+          title: 'I am excited to announce that on January 2nd, 2026, I will be...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-if-you-plan-on-attending-the-sc25-conference-come-join-by-birds-of-a-feather-session-on-randnla-software",
-          title: 'If you plan on attending the SC25 conference, come join by Birds of...',
+          section: "News",},{id: "news-if-you-plan-on-attending-the-sc25-conference-come-join-by-bof-session-on-randnla-software",
+          title: 'If you plan on attending the SC25 conference, come join by BoF session...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
