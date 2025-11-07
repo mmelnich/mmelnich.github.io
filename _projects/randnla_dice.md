@@ -2,7 +2,7 @@
 layout: page
 title: RandNLA Dice
 description: Handout from the SC25 Birds of a Feather [session](https://sc25.conference-program.com/presentation/?id=bof171&sess=sess418) titled "Randomized Numerical Linear Algebra in HPC: Toward a Sustainable, Scalable Software Ecosystem."
-img: assets/img/12.jpg
+img: assets/img/Dice_background.jpg
 importance: 1
 category: work-adjacent
 related_publications: false
