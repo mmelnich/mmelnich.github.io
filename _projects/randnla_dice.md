@@ -1,7 +1,7 @@
 ---
 layout: page
 title: RandNLA Dice
-description: Handout from the SC25 Birds of a Feather session titled "Randomized Numerical Linear Algebra in HPC: Toward a Sustainable, Scalable Software Ecosystem."
+description: SC25 BoF Handout
 img: assets/img/Dice_background.jpg
 importance: 1
 category: work-adjacent
