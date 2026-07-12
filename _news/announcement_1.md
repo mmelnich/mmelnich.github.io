@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I successfully defended my Ph.D dissertation titled "[Responsible Recklessness: Why High Performance Computing Must Embrace Randomized Numerical Linear Algebra](https://drive.google.com/file/d/1V7e7nYdNLlEtlUVU4acUKZdmUx6AwfsK/view?usp=sharing)."
+I successfully defended my Ph.D dissertation titled "[Responsible Recklessness: Why High Performance Computing Must Embrace Randomized Numerical Linear Algebra](https://voljournals.utk.edu/utk_graddiss/13620/)."

@@ -30,6 +30,11 @@ back_to_top: true # set to false to disable the back to top button
 # repo color theme
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+# host for github-readme-stats cards. The shared public instance
+# (https://github-readme-stats.vercel.app) is heavily rate-limited, so cards
+# often fail to load. Point this at your own Vercel deployment for reliability:
+# https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own
+repo_readme_stats_host: https://github-readme-stats.vercel.app
 repo_trophies:
   enabled: true
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy

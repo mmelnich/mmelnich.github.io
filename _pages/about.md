@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Contact: <a href="mailto:m.y.melnich@gmail.com">m.y.melnich@gmail.com</a></p>
+    <p>Contact: <a href="mailto:mmelnich@berkeley.edu">mmelnich@berkeley.edu</a></p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -25,5 +25,5 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a final-year Computer Science Ph.D student at the University of Tennessee Knoxville, advised by [Dr. Jack Dongarra](https://scholar.google.com/citations?user=X4SbSTAAAAAJ&hl=en).  
-I also serve as a graduate research assistant at the [Innovative Computing Laboratory](https://icl.utk.edu/).
+I am a postdoctoral researcher at the University of California, Berkeley Department of Statistics, with a joint appointment in the [International Computer Science Institute](https://www.icsi.berkeley.edu/icsi/). My specialization is Randomized Numerical Linear Algebra.  
+In December 2025, I earned my PhD in computer science from the University of Tennessee, Knoxville, where I was advised by [Dr. Jack Dongarra](https://scholar.google.com/citations?user=X4SbSTAAAAAJ&hl=en).
