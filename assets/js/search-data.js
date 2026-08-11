@@ -412,6 +412,11 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-computational-mathematics-for-and-with-ai-ml",
+          title: 'Computational Mathematics for and with AI/ML',
+          description: "Companion page for our group poster at the Math &amp; AI workshop in Seattle (August 18-20, 2026).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mathai/";
             },},{id: "projects-randnla-dice",
           title: 'RandNLA Dice',
           description: "SC25 BoF Handout",
