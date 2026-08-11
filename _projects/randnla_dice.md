@@ -2,9 +2,9 @@
 layout: page
 title: RandNLA Dice
 description: SC25 BoF Handout
-img: assets/img/Dice_background.jpg
-importance: 1
-category: work-adjacent
+img: assets/img/Dice_background.jpeg
+importance: 2
+category: presentations
 related_publications: false
 ---
 
