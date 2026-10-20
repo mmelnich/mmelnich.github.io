@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Numerical Linear Algebra Software: Present and Future"
+title: "Numerical Linear Algebra Software in the AI Era: Present and Future"
 description: "Companion page for our poster at the Sky Computing Lab End-of-Project meeting (UC Berkeley, October 21, 2026)."
 img: assets/img/sky-ring-thumb.png
 importance: 0
@@ -50,9 +50,9 @@ _styles: >
     <li><b>RandBLAS</b>: <a href="https://github.com/BallisticLA/RandBLAS" target="_blank" rel="noopener">GitHub</a>, <a href="https://randblas.readthedocs.io/en/latest/" target="_blank" rel="noopener">documentation</a>, <a href="https://github.com/BallisticLA/RandBLAS/releases/tag/1.1.0" target="_blank" rel="noopener">release 1.1.0</a></li>
     <li><b>RandLAPACK</b>: <a href="https://github.com/BallisticLA/RandLAPACK" target="_blank" rel="noopener">GitHub</a>, <a href="https://github.com/BallisticLA/RandLAPACK/blob/main/INSTALL.md" target="_blank" rel="noopener">one-command install of both libraries</a>, <a href="https://discord.gg/R4qj8Er9YW" target="_blank" rel="noopener">Discord</a></li>
     <li><b>MATLAB and Python bindings</b>: <a href="https://github.com/BallisticLA/randlapack-bindings" target="_blank" rel="noopener">randlapack-bindings</a></li>
-    <li><b>Grading the BLAS</b>: <a href="https://arxiv.org/abs/2609.12307" target="_blank" rel="noopener">the paper</a>, <a href="https://github.com/Reference-LAPACK/grading-the-BLAS" target="_blank" rel="noopener">the test code</a></li>
     <li><b>VSCL</b>: <a href="https://github.com/VSCL-x-VERITAS/lean-computational-mathematics" target="_blank" rel="noopener">the Lean 4 library</a></li>
     <li><b>Sources</b> [1] to [45]: <a href="#sources">listed below</a></li>
+    <li><b>Related work</b>: <a href="https://arxiv.org/abs/2609.12307" target="_blank" rel="noopener">How to grade the accuracy of the BLAS</a> [5] and its <a href="https://github.com/Reference-LAPACK/grading-the-BLAS" target="_blank" rel="noopener">test code</a></li>
     <li><b>The poster</b>: <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener">PDF, 48 x 36 in</a> (<a href="#poster">preview</a>)</li>
   </ul>
 </div>
@@ -98,7 +98,7 @@ _styles: >
   <div class="sky-card build">
     <h3>Call</h3>
     <ul>
-      <li>C++ at the core; <a href="https://github.com/BallisticLA/randlapack-bindings" target="_blank" rel="noopener">MATLAB (MEX) and Python bindings</a> (MATLAB covers BQRRP and funNystr&ouml;m++, Python is a BQRRP proof of concept); Julia planned.</li>
+      <li>C++ at the core; <a href="https://github.com/BallisticLA/randlapack-bindings" target="_blank" rel="noopener">MATLAB (MEX) and Python bindings</a> (MATLAB covers BQRRP and funNystr&ouml;m++, Python is a BQRRP proof of concept).</li>
       <li>GPUs: RandLAPACK runs BQRRP and CQRRPT on NVIDIA CUDA; RandBLAS CUDA support is in development.</li>
       <li>Questions and development: the <a href="https://discord.gg/R4qj8Er9YW" target="_blank" rel="noopener">RandLAPACK Discord server</a>.</li>
     </ul>
@@ -135,8 +135,8 @@ _styles: >
   testing harness behind those audits exists today; everything else below is proposed.
 </p>
 <p>
-  <b>The proposed design</b> has five stages over one archetype catalog. A kernel comes in as a
-  black box (source or binary, any language). A model recognizes which archetype it implements
+  <b>The proposed design</b> has five stages over one archetype catalog. A kernel comes in as C++
+  or Python source code, whoever or whatever wrote it. A model recognizes which archetype it implements
   and writes the adapter; sandboxed probe runs confirm or reject the label; an adversarial sweep,
   seeded and sandboxed on the kernel's own hardware, measures error against the bound; a signed
   certificate records hashes, setup and a trust grade. The catalog defines 28 archetypes,
@@ -145,11 +145,11 @@ _styles: >
   (error bound, threshold, input generators), and failing cases refine the catalog.
 </p>
 <p>
-  <b>Grading.</b> The A, B, C grades of the BLAS [5] (componentwise, mixed and normwise error
-  bounds) are our reference. We intend to extend them to more assumptions (precision,
-  exceptions), more hardware and every archetype. Closed kernels and accelerators expose no internals, so no
-  formal model of them exists and the grade is the model that testing yields; the tests must
-  therefore resist gaming, through secret seeds, mixed inputs and adversarial search. Related:
+  <b>The certificate</b> records the assumptions a kernel was tested under (sizes, data range,
+  precision, exceptions, hardware) and the bound it met, both taken from the archetype's
+  contract: the error bound proved in VSCL [6], a threshold and input generators. Kernels are
+  tested as black boxes, so the tests must resist gaming, through secret seeds, mixed inputs and
+  adversarial search. Related:
   the <a href="https://arxiv.org/abs/2207.09281" target="_blank" rel="noopener">proposed consistent exception handling for the BLAS and LAPACK</a>
   and the <a href="https://github.com/P3109/Public" target="_blank" rel="noopener">IEEE P3109</a> draft standard for low-precision arithmetic.
 </p>
@@ -170,14 +170,15 @@ _styles: >
   book-formalization skill drives coding agents chapter by chapter (extract, inventory, prove in
   Lean 4, audit faithfulness, publish); open-weight provers are under test. On 10 stability-proof
   tasks, an agent with an early version of the library proved 6.1x faster with 5.4x shorter
-  proofs. <b>Next targets:</b> error bounds for IEEE P3109 [31] low-precision reductions;
-  LU and QR on BLAS of a known grade; the MR³ SVD [30]; mixed and very low precision.
+  proofs. <b>Next targets:</b> Lean theorems carrying a building block's error bound up to LU,
+  QR and eigensolver bounds; bounds below 16 bits, first for IEEE P3109 [31] reductions; the MR³
+  SVD [30].
 </p>
 
 <h2 id="poster">The poster</h2>
 <div class="sky-poster">
   <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener">
-    <img src="/assets/img/sky-poster-preview.png" alt="Poster: Numerical Linear Algebra Software, Present and Future. Left: RandBLAS and RandLAPACK. Centre: a ring diagram joining the two halves through the kernel contract. Right: VERITAS and VSCL."/>
+    <img src="/assets/img/sky-poster-preview.png" alt="Poster: Numerical Linear Algebra Software in the AI Era, Present and Future. Left: RandBLAS and RandLAPACK. Centre: a ring diagram joining the two halves through the kernel contract. Right: VERITAS and VSCL."/>
   </a>
 </div>
 <p style="margin-top: 0.6rem;">
