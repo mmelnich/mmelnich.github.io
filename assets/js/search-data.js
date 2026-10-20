@@ -422,8 +422,8 @@ ninja.data = [{
           description: "SC25 BoF Handout",
           section: "Projects",handler: () => {
               window.location.href = "/projects/randnla_dice/";
-            },},{id: "projects-numerical-linear-algebra-software-present-and-future",
-          title: 'Numerical Linear Algebra Software: Present and Future',
+            },},{id: "projects-numerical-linear-algebra-software-in-the-ai-era-present-and-future",
+          title: 'Numerical Linear Algebra Software in the AI Era: Present and Future',
           description: "Companion page for our poster at the Sky Computing Lab End-of-Project meeting (UC Berkeley, October 21, 2026).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sky/";
