@@ -53,7 +53,7 @@ _styles: >
     <li><b>VSCL</b>: <a href="https://github.com/VSCL-x-VERITAS/lean-computational-mathematics" target="_blank" rel="noopener">the Lean 4 library</a></li>
     <li><b>Sources</b> [1] to [45]: <a href="#sources">listed below</a></li>
     <li><b>Related work</b>: <a href="https://arxiv.org/abs/2609.12307" target="_blank" rel="noopener">How to grade the accuracy of the BLAS</a> [5] and its <a href="https://github.com/Reference-LAPACK/grading-the-BLAS" target="_blank" rel="noopener">test code</a></li>
-    <li><b>The poster</b>: <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener">PDF, 48 x 36 in</a> (<a href="#poster">preview</a>)</li>
+    <li><b>The full poster</b>: <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener">PDF, 48 x 36 in</a> (<a href="#poster">preview</a>)</li>
   </ul>
 </div>
 
@@ -175,14 +175,15 @@ _styles: >
   SVD [30].
 </p>
 
-<h2 id="poster">The poster</h2>
+<h2 id="poster">The full poster</h2>
+<p>The printed poster is a shorter version of this one.</p>
 <div class="sky-poster">
   <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener">
     <img src="/assets/img/sky-poster-preview.png" alt="Poster: Numerical Linear Algebra Software in the AI Era, Present and Future. Left: RandBLAS and RandLAPACK. Centre: a ring diagram joining the two halves through the kernel contract. Right: VERITAS and VSCL."/>
   </a>
 </div>
 <p style="margin-top: 0.6rem;">
-  <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener"><b>Download the poster (PDF, 48 x 36 in)</b></a>
+  <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener"><b>Download the full poster (PDF, 48 x 36 in)</b></a>
 </p>
 
 <h2 id="sources">Sources cited on the poster</h2>
