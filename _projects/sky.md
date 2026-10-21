@@ -275,7 +275,7 @@ _styles: >
 </p>
 
 <p class="sky-credit">
-  Presented by Maksim Melnichenko. PIs: Michael W. Mahoney, Riley J. Murray and Kimon
+  Presented by Maksim Melnichenko. PIs: Michael W. Mahoney, Riley Murray and Kimon
   Fountoulakis. The work spans UC Berkeley, the International Computer Science Institute, Sandia
   National Laboratories, the University of Tennessee, Knoxville, and the University of Waterloo.
   Page maintained by Maksim Melnichenko.
