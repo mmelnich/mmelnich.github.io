@@ -66,7 +66,7 @@ _styles: >
 </div>
 <div class="sky-actions">
   <a href="/assets/pdf/sky-poster-2026-10-21.pdf" target="_blank" rel="noopener">Open the PDF</a>
-  <a class="ghost" href="/assets/pdf/sky-poster-2026-10-21.pdf" download>Download (48 x 35.5 in)</a>
+  <a class="ghost" href="/assets/pdf/sky-poster-2026-10-21.pdf" download>Download (48 x 36 in)</a>
 </div>
 
 <h2 id="links">Project links</h2>
@@ -82,7 +82,7 @@ _styles: >
     <div class="kind">C++ library</div>
     <h3>RandLAPACK</h3>
     <p>RandNLA methods built on RandBLAS, tested and benchmarked.</p>
-    <div class="sky-pills"><a href="https://github.com/BallisticLA/RandLAPACK" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/BallisticLA/RandLAPACK/blob/main/INSTALL.md" target="_blank" rel="noopener">One-command install</a><a href="https://discord.gg/R4qj8Er9YW" target="_blank" rel="noopener">Discord</a></div>
+    <div class="sky-pills"><a href="https://github.com/BallisticLA/RandLAPACK" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/BallisticLA/RandLAPACK/blob/main/INSTALL_SCRIPT.md" target="_blank" rel="noopener">One-command install</a><a href="https://discord.gg/R4qj8Er9YW" target="_blank" rel="noopener">Discord</a></div>
   </div>
   <div class="sky-bubble build">
     <div class="kind">Bindings</div>
