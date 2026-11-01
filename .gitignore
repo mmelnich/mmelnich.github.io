@@ -11,3 +11,5 @@ assets/libs/
 node_modules/
 vendor
 .idea
+# rendered at deploy time by bin/github-cards.mjs
+assets/img/github-cards/

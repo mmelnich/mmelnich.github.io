@@ -60,6 +60,8 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+  schedule:
+    - cron: "23 7 * * 1" # weekly rebuild so the GitHub cards on /repositories/ stay current
 
 permissions:
   contents: write
@@ -88,6 +90,22 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Setup Node 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Render GitHub cards 🃏
+        # Static SVGs for /repositories/; a failure here only means the cards fall back to the live service.
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        env:
+          PAT_1: ${{ secrets.GH_CARDS_TOKEN || secrets.GITHUB_TOKEN }}
+          CARDS_DEPS: ${{ runner.temp }}/github-cards-deps
+        run: |
+          mkdir -p "$CARDS_DEPS" && echo '{"private": true}' > "$CARDS_DEPS/package.json"
+          npm install --prefix "$CARDS_DEPS" --no-save --no-package-lock --ignore-scripts \
+            @stats-organization/github-readme-stats-core@2.2.1 js-yaml@4.1.0
+          node bin/github-cards.mjs
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick

@@ -31,17 +31,23 @@
   {% assign max_lines = 2 %}
 {% endif %}
 
+{% comment %} Prefer the cards rendered at build time by bin/github-cards.mjs; fall back to the live service. {% endcomment %}
+{% capture light_card %}assets/img/github-cards/repo-{{ repo_url[0] }}-{{ repo_url[1] }}-light.svg{% endcapture %}
+{% capture dark_card %}assets/img/github-cards/repo-{{ repo_url[0] }}-{{ repo_url[1] }}-dark.svg{% endcapture %}
+{% capture has_light %}{% file_exists {{ light_card }} %}{% endcapture %}
+{% capture has_dark %}{% file_exists {{ dark_card }} %}{% endcapture %}
+
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.repository }}">
     <img
       class="only-light w-100"
       alt="{{ include.repository }}"
-      src="{{ site.repo_readme_stats_host }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
+      src="{% if has_light == 'true' %}{{ light_card | relative_url }}{% else %}{{ site.repo_readme_stats_host }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}{% endif %}"
     >
     <img
       class="only-dark w-100"
       alt="{{ include.repository }}"
-      src="{{ site.repo_readme_stats_host }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
+      src="{% if has_dark == 'true' %}{{ dark_card | relative_url }}{% else %}{{ site.repo_readme_stats_host }}/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}{% endif %}"
     >
   </a>
 </div>

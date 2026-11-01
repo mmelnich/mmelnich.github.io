@@ -14,17 +14,23 @@
     {% endcase %}
 {% endcase %}
 
+{% comment %} Prefer the cards rendered at build time by bin/github-cards.mjs; fall back to the live service. {% endcomment %}
+{% capture light_card %}assets/img/github-cards/user-{{ include.username }}-light.svg{% endcapture %}
+{% capture dark_card %}assets/img/github-cards/user-{{ include.username }}-dark.svg{% endcapture %}
+{% capture has_light %}{% file_exists {{ light_card }} %}{% endcapture %}
+{% capture has_dark %}{% file_exists {{ dark_card }} %}{% endcapture %}
+
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.username }}">
     <img
       class="only-light w-100"
       alt="{{ include.username }}"
-      src="{{ site.repo_readme_stats_host }}/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true&hide_rank=true"
+      src="{% if has_light == 'true' %}{{ light_card | relative_url }}{% else %}{{ site.repo_readme_stats_host }}/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true&hide_rank=true{% endif %}"
     >
     <img
       class="only-dark w-100"
       alt="{{ include.username }}"
-      src="{{ site.repo_readme_stats_host }}/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true&hide_rank=true"
+      src="{% if has_dark == 'true' %}{{ dark_card | relative_url }}{% else %}{{ site.repo_readme_stats_host }}/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true&hide_rank=true{% endif %}"
     >
   </a>
 </div>
