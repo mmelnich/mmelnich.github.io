@@ -93,7 +93,7 @@ jobs:
       - name: Setup Node 🟢
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "24" # what github-readme-stats-core declares
       - name: Render GitHub cards 🃏
         # Static SVGs for /repositories/; a failure here only means the cards fall back to the live service.
         if: github.event_name != 'pull_request'
