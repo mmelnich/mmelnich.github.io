@@ -1429,3 +1429,48 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+/*******************************************************************************
+ * Typography and colour scheme (IBM Plex Sans, Slate)
+ ******************************************************************************/
+
+// MDB sets Roboto Light (300) on the body, headings, navbar and table cells.
+body {
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.table td,
+.navbar {
+  font-weight: 400;
+}
+
+// The current page in the navbar sits one step above the text instead of jumping to bold.
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  font-weight: 600;
+}
+
+// Bootstrap colours tables #212529 (white with table-dark); follow the theme instead.
+.table,
+.table-dark {
+  color: var(--global-text-color);
+}
+
+// Links in running text get a light underline: against the body text the link colour alone
+// is below 3:1, most of all in dark mode.
+:is(.desc, .clearfix, .news td, .more-info) a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+}
+
+footer.fixed-bottom {
+  border-top: 1px solid var(--global-divider-color);
+}
